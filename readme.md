@@ -10,8 +10,8 @@ list :
 ### inputs
  - db URL (+creds)
  - table exclusions(comma separated) - default none
- - out d2 name 
- - img name
+ - out d2 name - default out.d2
+ - img name - default out.svg
    
 
 
