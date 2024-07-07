@@ -9,6 +9,9 @@ list :
 ### inputs
  - db URL (+creds)
  - table exclusions(comma separated)
+ - out d2 name
+ - d2 name
+ - img name
    
 
 
