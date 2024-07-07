@@ -14,6 +14,8 @@ list :
  - img name - optional, default out.svg
  - detail - basic (minimal) / all (everything), optional, default basic
 
+### templates
+ - eta ?
 
 # based on
 D2 ERD from Postgres
