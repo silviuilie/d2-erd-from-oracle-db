@@ -5,6 +5,10 @@ list :
  - tables (type)
  - columns (type, nullable, constraint, fk/pk, index name and type)
  - FKs (table.column->table.column)
+
+### inputs
+ - db URL (+creds)
+ - table exclusions(comma separated)
    
 
 
