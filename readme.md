@@ -1,6 +1,6 @@
 ## D2 ERD from Oracle
 
 
-## base don
+## based on
 D2 ERD from Postgres
 https://github.com/zekenie/d2-erd-from-postgres/
