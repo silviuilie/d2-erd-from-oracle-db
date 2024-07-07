@@ -2,7 +2,7 @@
 
 ### query
 list :
- - tables (type)
+ - tables (type)(triggers?)
  - columns (type, nullable, constraint, fk/pk, index name and type)
  - FKs (table.column->table.column)
 
