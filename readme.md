@@ -3,7 +3,7 @@
 ### query
 list :
  - tables (type)(triggers?)
- - views ? MVs ?
+ - views ? MVs ? 
  - columns (type, nullable, constraint, fk/pk, index name and type)
  - FKs (table.column->table.column)
 
@@ -12,7 +12,7 @@ list :
  - table exclusions(comma separated) - optional, default none
  - out d2 name - optional, default out.d2
  - img name - optional, default out.svg
-   
+ - detail : basic (minimal) / all (everything) 
 
 
 ## based on
