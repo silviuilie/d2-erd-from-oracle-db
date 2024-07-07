@@ -1,13 +1,13 @@
-## D2 ERD from Oracle
+# D2 ERD from Oracle
 
-### query
+### query TODO
 list :
  - tables (type)(triggers?)
  - views ? MVs ? 
  - columns (type, nullable, constraint, fk/pk, index name and type)
  - FKs (table.column->table.column)
 
-### inputs
+### inputs TODO
  - db URL (+creds), required
  - table exclusions(comma separated) - optional, default none
  - out d2 name - optional, default out.d2
@@ -15,6 +15,6 @@ list :
  - detail - basic (minimal) / all (everything), optional, default basic
 
 
-## based on
+# based on
 D2 ERD from Postgres
 https://github.com/zekenie/d2-erd-from-postgres/
