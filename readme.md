@@ -8,10 +8,10 @@ list :
  - FKs (table.column->table.column)
 
 ### inputs
- - db URL (+creds)
- - table exclusions(comma separated) - default none
- - out d2 name - default out.d2
- - img name - default out.svg
+ - db URL (+creds), required
+ - table exclusions(comma separated) - optional, default none
+ - out d2 name - optional, default out.d2
+ - img name - optional, default out.svg
    
 
 
