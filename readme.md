@@ -3,7 +3,7 @@
 ## before TODOs
  - redo the queries _as they are_ but for orcl
  - do a test
- - 
+ - generate a new project (with tests)
  
 
 ### query TODO
