@@ -1,8 +1,6 @@
 # D2 ERD from Oracle
 
-
-### before TODO
-install oracle
+ 
 
 ### query TODO
 list :
