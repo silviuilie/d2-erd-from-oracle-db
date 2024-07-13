@@ -1,5 +1,7 @@
 # D2 ERD from Oracle
 
+## before TODOs
+redo the queries _as they are_ but for orcl
  
 
 ### query TODO
