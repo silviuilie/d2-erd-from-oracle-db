@@ -1,7 +1,7 @@
 # D2 ERD from Oracle
 
 ## before TODOs
- - redo the queries _as they are_ but for orcl (100%)
+ - ~~redo the queries _as they are_ but for orcl (100%)~~
  - comment
  - formatting
  - do a test
