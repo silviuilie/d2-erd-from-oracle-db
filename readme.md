@@ -1,7 +1,6 @@
 # D2 ERD from Oracle
 
-## before TODOs 
- - comment 
+## before TODOs  
  - do a test
  - generate a new project (with tests)
  
