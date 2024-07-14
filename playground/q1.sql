@@ -52,8 +52,8 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                        UTC.NULLABLE)
 SELECT cols.TABLE_NAME,
        pk_keys.COLUMN_NAME                            primary_key,
-       json_arrayagg(cols.json_cols RETURNING CLOB)   columns,
-       json_arrayagg(fk_keys.json_fks RETURNING CLOB) foreign_relations
+       JSON_ARRAYAGG(cols.json_cols RETURNING CLOB)   columns,
+       JSON_ARRAYAGG(fk_keys.json_fks RETURNING CLOB) foreign_relations
 FROM cols,
      fk_keys,
      pk_keys
@@ -61,4 +61,4 @@ WHERE cols.TABLE_NAME = fk_keys.fk_table(+)
   AND cols.TABLE_NAME = pk_keys.TABLE_NAME
   AND fk_keys.pk_column(+) = pk_keys.COLUMN_NAME
 GROUP BY cols.TABLE_NAME,
-         pk_keys.COLUMN_NAME
+         pk_keys.COLUMN_NAME;
