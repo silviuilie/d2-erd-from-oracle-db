@@ -3,7 +3,7 @@
 ## before TODOs
  - ~~redo the queries _as they are_ but for orcl (100%)~~
  - comment
- - formatting
+ - ~~formatting~~
  - do a test
  - generate a new project (with tests)
  
