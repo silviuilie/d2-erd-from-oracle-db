@@ -1,6 +1,9 @@
 # D2 ERD from Oracle
 
-## before TODOs  
+## before TODOs   
+ - install node oracle driver
+   - configure
+   - connect
  - do a test
  - generate a new project (with tests)
  
