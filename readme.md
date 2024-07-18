@@ -1,11 +1,11 @@
 # D2 ERD from Oracle
 
 ## before TODOs   
+ - generate a new project (with tests)
  - install node oracle driver
    - configure
    - connect
  - do a test
- - generate a new project (with tests)
  
 
 ### query TODO
