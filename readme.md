@@ -4,6 +4,7 @@
  - ~~generate a new project with tests~~
    -  tests
  - ~~install node oracle driver~~
+   - input credentials
    - configure
    - connect
  - do a test
