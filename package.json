@@ -1,0 +1,17 @@
+{
+  "name": "d2-ord-from-oracle",
+  "version": "1.0.0",
+  "description": "d2 diagram from oracle instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "d2",  "diagram",  "ORM", "ORD",  "oracle"
+  ],
+  "author": "silviuilie",
+  "license": "ISC",
+  "dependencies": {
+    "oracledb": "^6.5.1"
+  }
+}
