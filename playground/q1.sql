@@ -61,4 +61,4 @@ WHERE cols.TABLE_NAME = fk_keys.fk_table(+)
   AND cols.TABLE_NAME = pk_keys.TABLE_NAME
   AND fk_keys.pk_column(+) = pk_keys.COLUMN_NAME
 GROUP BY cols.TABLE_NAME,
-         pk_keys.COLUMN_NAME;
+         pk_keys.COLUMN_NAME

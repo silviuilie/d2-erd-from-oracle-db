@@ -7,11 +7,16 @@
     "test": "test"
   },
   "keywords": [
-    "d2",  "diagram",  "ORM", "ORD",  "oracle"
+    "d2",
+    "diagram",
+    "ORM",
+    "ORD",
+    "oracle"
   ],
   "author": "silviuilie",
   "license": "ISC",
   "dependencies": {
-    "oracledb": "^6.5.1"
+    "oracledb": "^6.5.1",
+    "prompt": "^1.3.0"
   }
 }

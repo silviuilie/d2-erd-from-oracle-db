@@ -1,14 +1,33 @@
+const oracle = require("oracledb");
+const fs = require("fs");
+const prompt = require('prompt');
 
-const oracle= require("oracledb");
+prompt.message = "oracle";
+prompt.start();
 
-async function getSchema() {
 
-    const connection = await oracle.getConnection ({
-        user          : "hr",
-        password      : mypw,
-        connectString : args[0]
-    });
+async function getSchema(dbUrl) {
+    prompt.get(
+        {
+            properties: {
+                username: {required: true, hidden: true},
+                password: {required: true, hidden: true}
+            }
+        }, async function (err, input) {
+            const connection = await oracle.getConnection({
+                user: input.username,
+                password: input.password,
+                connectString: dbUrl
+            });
 
+
+            const dbResult = await connection.execute(
+                 fs.readFileSync("./playground/q1.sql").toString()
+            );
+            console.log("Result is:", dbResult.rows);
+        });
+
+    return;
     const client = new Client(args[0]);
     await client.connect();
 
@@ -25,8 +44,9 @@ async function getSchema() {
 }
 
 async function main() {
-    const schema = await getSchema();
-    const output = eta.render(template, { schema });
+    const schema = await getSchema(process.argv[2]);
+    return;
+    const output = eta.render(template, {schema});
     fs.writeFileSync("output.d2", output);
     sh("d2", ["output.d2", "out.svg"]);
 }
