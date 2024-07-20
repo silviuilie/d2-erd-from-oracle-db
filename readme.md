@@ -5,8 +5,9 @@
    -  tests
  - ~~install node oracle driver~~
    - ~~input credentials~~
-   - configure
+   - ~~configure~~
    - ~~connect~~
+   - list queries
  - do a test
  
 
