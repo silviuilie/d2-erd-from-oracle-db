@@ -13,13 +13,7 @@
    - default query
      
  - do a test
- 
-
-### query TODO
-list : 
- - columns (type, nullable, constraint, fk/pk, index name and type)
- - FKs (table.column->table.column)
-
+  
 ### inputs TODO 
  - table exclusions(comma separated) - optional, default none
  - out d2 name - optional, default out.d2
