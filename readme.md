@@ -6,7 +6,7 @@
  - ~~install node oracle driver~~
    - ~~input credentials~~
    - configure
-   - connect
+   - ~~connect~~
  - do a test
  
 
