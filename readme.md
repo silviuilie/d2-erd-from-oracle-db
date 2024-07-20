@@ -1,7 +1,7 @@
 # D2 ERD from Oracle
 
 ## before TODOs   
- - ~~install node oracle driver~~
+ - general
    - ~~input credentials~~
    - ~~configure~~
    - list query types
