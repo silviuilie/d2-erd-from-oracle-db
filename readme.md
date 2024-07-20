@@ -1,7 +1,6 @@
 # D2 ERD from Oracle
 
 ## before TODOs   
- - ~~generate a new project with tests~~
  - ~~install node oracle driver~~
    - ~~input credentials~~
    - ~~configure~~
