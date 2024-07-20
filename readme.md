@@ -7,8 +7,10 @@
    - ~~input credentials~~
    - ~~configure~~
    - ~~connect~~
-   - list queries
+   - list query types
+     - views 
    - default query
+     
  - do a test
  
 
