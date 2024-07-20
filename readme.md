@@ -9,6 +9,7 @@
    - ~~connect~~
    - list query types
      - views 
+     - all tables
    - default query
      
  - do a test
