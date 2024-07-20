@@ -4,7 +4,6 @@
  - ~~install node oracle driver~~
    - ~~input credentials~~
    - ~~configure~~
-   - ~~connect~~
    - list query types
      - views 
      - all tables
