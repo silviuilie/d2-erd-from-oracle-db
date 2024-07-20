@@ -18,7 +18,7 @@
  - detail - basic (minimal) / all (everything), optional, default basic
 
 ### templates
- - eta ?
+ - add eta 
 
 # based on
 D2 ERD from Postgres
