@@ -8,6 +8,7 @@
    - ~~configure~~
    - ~~connect~~
    - list queries
+   - default query
  - do a test
  
 
