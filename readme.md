@@ -1,6 +1,8 @@
 # D2 ERD from Oracle
 
-## before TODOs   
+## PRIMARY TODOs   
+ - order columns by PK,FK, other
+ - 
  - general  
    - list query types
      - views 
