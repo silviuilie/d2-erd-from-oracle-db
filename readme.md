@@ -2,7 +2,7 @@
 
 ## PRIMARY TODOs   
  - order columns by PK,FK, other
- - 
+ - distinct FK relationships
  - general  
    - list query types
      - views 
