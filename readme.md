@@ -1,8 +1,7 @@
 # D2 ERD from Oracle
 
 ## before TODOs   
- - general
-   - ~~input credentials~~
+ - general 
    - ~~configure~~
    - list query types
      - views 
