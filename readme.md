@@ -1,8 +1,7 @@
 # D2 ERD from Oracle
 
 ## before TODOs   
- - general 
-   - ~~configure~~
+ - general  
    - list query types
      - views 
      - all tables
