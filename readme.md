@@ -1,7 +1,7 @@
 # D2 ERD from Oracle
 
 ## PRIMARY TODOs   
- - order columns by PK,FK, other
+ - ~~order columns by PK,FK, other~~
  - distinct FK relationships
  - add nullable attribute
  - general  
