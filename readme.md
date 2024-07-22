@@ -2,7 +2,8 @@
 
 ## PRIMARY TODOs    
  - distinct FK relationships (oracle json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
- - add nullable attribute
+ -- missing FK (!?)
+ - ~~add~~ format nullable attribute
  - general  
    - list query types
      - views 
