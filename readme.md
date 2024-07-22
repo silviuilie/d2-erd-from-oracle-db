@@ -20,7 +20,4 @@
  - out d2 name - optional, default out.d2
  - img name - optional, default out.svg
  - detail - basic (minimal) / all (everything), optional, default basic
-
-### templates
- - add eta 
-
+ 
