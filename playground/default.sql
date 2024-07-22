@@ -6,7 +6,7 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                    AND uc.CONSTRAINT_TYPE = 'P'
                  GROUP BY uc.TABLE_NAME,
                           ucc.COLUMN_NAME),
-     fk_keys AS (SELECT uc.constraint_name  fk_name,
+     fk_keys AS (SELECT uc.CONSTRAINT_NAME  fk_name,
                         uc.TABLE_NAME       fk_table,
                         ucc.COLUMN_NAME     fk_column,
                         ucp.CONSTRAINT_NAME pk_name,
@@ -20,7 +20,7 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                                 KEY 'pk_table' VALUE ucp.TABLE_NAME,
                                 KEY 'pk_column' VALUE uccp.COLUMN_NAME
                                 WITH UNIQUE KEYS
-                        )                   json_fks
+                        )  json_fks
                  FROM USER_CONSTRAINTS uc,
                       USER_CONSTRAINTS ucp,
                       USER_CONS_COLUMNS ucc,
@@ -29,31 +29,39 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                    AND uc.CONSTRAINT_TYPE = 'R'
                    AND uc.r_constraint_name = ucp.CONSTRAINT_NAME
                    AND uccp.TABLE_NAME = ucp.TABLE_NAME
-                 GROUP BY uc.constraint_name,
+                 GROUP BY uc.CONSTRAINT_NAME,
                           uc.TABLE_NAME,
                           ucc.COLUMN_NAME,
                           ucp.CONSTRAINT_NAME,
                           ucp.TABLE_NAME,
                           uccp.COLUMN_NAME),
-     cols AS (SELECT utc.TABLE_NAME,
+     cols AS (SELECT utc.COLUMN_ID,
+                     utc.TABLE_NAME,
                      UTC.COLUMN_NAME,
                      UTC.DATA_TYPE || '(' || UTC.DATA_LENGTH || ')' DATA_TYPE,
                      UTC.NULLABLE,
                      JSON_OBJECT(
                              KEY 'table_name' VALUE utc.TABLE_NAME,
                              KEY 'column_name' VALUE UTC.COLUMN_NAME,
+                             KEY 'is_fk' VALUE count(distinct fks.fk_column),
                              KEY 'data_type' VALUE UTC.DATA_TYPE || '(' || UTC.DATA_LENGTH || ')',
                              KEY 'NULLABLE' VALUE UTC.NULLABLE
+                             WITH UNIQUE KEYS
                      )                                              json_cols
-              FROM USER_TAB_COLS utc
+              FROM user_tab_cols utc,
+                   fk_keys fks
+              WHERE utc.TABLE_NAME = fks.fk_table(+) and utc.COLUMN_NAME= fks.fk_column(+)
               GROUP BY utc.TABLE_NAME,
-                       UTC.COLUMN_NAME,
-                       UTC.DATA_TYPE || '(' || UTC.DATA_LENGTH || ')',
-                       UTC.NULLABLE)
+                       utc.COLUMN_NAME,
+                       utc.DATA_TYPE || '(' || UTC.DATA_LENGTH || ')',
+                       utc.NULLABLE,
+                       utc.COLUMN_ID )
 SELECT cols.TABLE_NAME,
        pk_keys.COLUMN_NAME                            primary_key,
-       JSON_ARRAYAGG(cols.json_cols RETURNING CLOB)   columns,
-       JSON_ARRAYAGG(fk_keys.json_fks RETURNING CLOB) foreign_relations
+       JSON_ARRAYAGG(cols.json_cols ORDER BY cols.COLUMN_ID  RETURNING CLOB)   columns,
+       /* (!) https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681 */
+       JSON_ARRAYAGG(fk_keys.json_fks ORDER BY fk_keys.fk_name   RETURNING CLOB) foreign_relations
+--        nvl(fk_keys.json_fks,'{}') foreign_relations
 FROM cols,
      fk_keys,
      pk_keys

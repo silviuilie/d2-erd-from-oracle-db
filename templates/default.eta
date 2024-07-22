@@ -1,0 +1,24 @@
+<% it.forEach(function(table) { %>
+
+<% console.log(` .. ${table['TABLE_NAME']}`) %>
+
+<%= table['TABLE_NAME'] %>: {
+  shape: sql_table
+<% let duplicatedCols = JSON.parse(table['COLUMNS'])  %>
+<% let colMap = new Map(duplicatedCols.map(col =>{return [col.column_name,col]})) %>
+<% colMap.forEach(function(column) { %>
+
+    <%= column.column_name %>:<%= column.data_type %> NULLABLE:<%= column.NULLABLE %><% if (column.is_fk) { %>{constraint: foreign_key}<% } %> <% if (column['column_name'] === table['PRIMARY_KEY']) { %>{constraint: primary_key}<% } %>
+
+  <% }) %>
+}
+
+<% if (table['FOREIGN_RELATIONS'] &&  Object.keys(JSON.parse(table['FOREIGN_RELATIONS'])).length > 0) {%>
+<% [JSON.parse(table['FOREIGN_RELATIONS'])].forEach(function(fkAgg) { %>
+<% fk = fkAgg[0]%>
+ <%= fk.fk_table %>.<%= fk.fk_column %> -> <%= fk.pk_table %>.<%= fk.pk_column %> : <%= fk.fk_name %>
+
+<% }) %>
+
+<% } %>
+<% }) %>
