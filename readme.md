@@ -1,8 +1,7 @@
 # D2 ERD from Oracle
 
 ## based on
-D2 ERD from Postgres
-https://github.com/zekenie/d2-erd-from-postgres/
+D2 ERD from Postgres [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## PRIMARY TODOs    
  - distinct FK relationships (oracle json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
