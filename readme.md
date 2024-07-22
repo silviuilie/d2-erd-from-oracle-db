@@ -1,6 +1,7 @@
 # [D2](https://github.com/terrastruct/d2) ERD from OracleDB
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
+
 ## PRIMARY TODOs    
 
  - distinct FK relationships (oracle json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
@@ -20,3 +21,6 @@
  - img name - optional, default out.svg
  - detail - basic (minimal) / all (everything), optional, default basic
  
+### Oracle 19c and JSON_ARRAYAGG
+ - describe
+ - oracle 23 oracle 18
