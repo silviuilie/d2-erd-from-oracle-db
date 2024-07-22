@@ -24,3 +24,4 @@
 ### Oracle 19c and JSON_ARRAYAGG
  - describe
  - oracle 23 oracle 18
+ - flat query (table object not json)
