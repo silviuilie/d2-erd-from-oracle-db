@@ -1,5 +1,5 @@
 # [D2](https://github.com/terrastruct/d2) ERD from OracleDB
-  see [D2](https://github.com/terrastruct/d2#related) ERD from Postgres [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
+  see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## PRIMARY TODOs    
 
