@@ -2,7 +2,7 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 
-## PRIMARY TODOs     
+### PRIMARY TODOs     
  - missing FK (!?)
  - ~~add~~ format nullable attribute
  - general  
@@ -10,7 +10,6 @@
      - views ?
      - all tables
    - default query
-     
  - do a test
   
 ### inputs TODO 
