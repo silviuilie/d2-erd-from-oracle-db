@@ -5,8 +5,6 @@
 ### PRIMARY TODOs     
  - missing FK (!?)
  - ~~add~~ format nullable attribute
- - general  
-   - list query types
      - views ?
      - all tables
    - default query
@@ -17,6 +15,11 @@
  - out d2 name - optional, default out.d2
  - img name - optional, default out.svg
  - detail - basic (minimal) / all (everything), optional, default basic
+
+### TODOs
+
+ - general  
+   - list query types
  
 ### Oracle 19c and JSON_ARRAYAGG
  - describe  distinct   relationships (oracle json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
