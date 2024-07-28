@@ -4,7 +4,7 @@
 
 ### PRIMARY TODOs     
  - missing FK (!?)
- - ~~add~~ format nullable attribute
+ - format nullable attribute
      - views ?
      - all tables  
   
