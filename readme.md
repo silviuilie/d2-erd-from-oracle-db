@@ -9,9 +9,9 @@
      - all tables  
   
 ### inputs TODO 
- - table exclusions(comma separated) - optional, default none
- - out d2 name - optional, default out.d2
- - img name - optional, default out.svg
+ - table exclusions(`exclude` - comma separated) - optional, default none
+ - out d2 name - `outd2` - optional, default out.d2
+ - img name - `imageName` - optional, default out.svg
  - detail - basic (minimal) / all (everything), optional, default basic
 
 ### TODOs
