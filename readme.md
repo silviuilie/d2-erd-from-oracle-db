@@ -6,8 +6,7 @@
  - missing FK (!?)
  - ~~add~~ format nullable attribute
      - views ?
-     - all tables 
- - do a test
+     - all tables  
   
 ### inputs TODO 
  - table exclusions(comma separated) - optional, default none
