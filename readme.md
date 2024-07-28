@@ -18,7 +18,7 @@
 
 ### TODOs
 
- - general  
+ - general  (default.sql)
    - list query types (default: list tables, PKs,FKs)
  
 ### Oracle 19c and JSON_ARRAYAGG
