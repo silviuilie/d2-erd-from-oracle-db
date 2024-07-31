@@ -3,7 +3,7 @@
 
 
 ### PRIMARY TODOs     
- - missing FK (!?)
+ - missing FK (!)
  - format nullable attribute
      - views ?
      - all tables  
