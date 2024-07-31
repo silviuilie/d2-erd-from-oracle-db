@@ -3,7 +3,7 @@
 
 
 ### PRIMARY TODOs     
- - duplicate FK 
+ - duplicate FK, fixed with template map
  - format nullable attribute
      - views ?
      - all tables  
