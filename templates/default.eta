@@ -12,13 +12,15 @@
 
   <% }) %>
 }
-
-<% if (table['FOREIGN_RELATIONS'] &&  Object.keys(JSON.parse(table['FOREIGN_RELATIONS'])).length > 0) {%>
-<% [JSON.parse(table['FOREIGN_RELATIONS'])].forEach(function(fkAgg) { %>
-<% fk = fkAgg[0]%>
+<% var fkMap = new Map()%>
+<% var fks = JSON.parse(table['FOREIGN_RELATIONS'])%>
+<% for (const fk of fks) {  %>
+<% fkMap.set(fk.fk_name,fk) %>
+<%}  %>
+<% for (var entry of fkMap.entries())  { %>
+<% fk = entry[0] %>
+<% fk = entry[1] %>
+<% console.log('--------',fk) %>
  <%= fk.fk_table %>.<%= fk.fk_column %> -> <%= fk.pk_table %>.<%= fk.pk_column %> : <%= fk.fk_name %>
-
-<% }) %>
-
 <% } %>
 <% }) %>
