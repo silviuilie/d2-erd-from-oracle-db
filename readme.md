@@ -4,6 +4,7 @@
 
 ### PRIMARY TODOs     
  - duplicate FK, fixed with template map
+ - test for oracle > 19c
  - format nullable attribute
      - views ?
      - all tables  
