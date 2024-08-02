@@ -3,8 +3,8 @@
 
 
 ### PRIMARY TODOs     
- - duplicate FK, fixed with template map
- - test for oracle > 19c
+ - ~~duplicate FK, fixed with template map~~
+ - test for oracle > 19c 
  - format nullable attribute
      - views ?
      - all tables  
@@ -13,6 +13,7 @@
  - table exclusions; `exclude` - comma separated, optional, default none - include all
  - out d2 name - `outd2` - optional, default out.d2
  - img name - `imageName` - optional, default out.svg
+ - d2 - `d2`' - optional, default `--layout=dagre`
  - detail - basic (minimal) / all (everything), optional, default basic
 
 ### TODOs
