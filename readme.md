@@ -9,6 +9,7 @@
 ### inputs TODO 
  - table exclusions; `exclude` - comma separated, optional, default none - include all
  - out d2 name - `outd2` - optional, default out.d2
+ - include nullable attribute - `nullability` - optional, default `true`
  - img name - `imageName` - optional, default out.svg
  - d2 - `d2` - optional, default `--layout=dagre`
  - detail - basic (minimal) / all (everything), optional, default basic
