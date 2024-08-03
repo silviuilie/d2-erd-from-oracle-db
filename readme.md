@@ -2,8 +2,7 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 
-### PRIMARY TODOs      
- - test for oracle > 19c 
+### PRIMARY TODOs       
  - format nullable attribute
      - views ?
      - all tables  
