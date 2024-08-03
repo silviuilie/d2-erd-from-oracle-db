@@ -3,6 +3,7 @@ const path = require('node:path');
 const fs = require("fs");
 const prompt = require('prompt');
 const {Eta} = require("eta");
+const yargs = require('yargs/yargs')
 const {execFileSync: sh} = require("child_process");
 
 prompt.message = "oracle";
@@ -39,14 +40,21 @@ async function render(dbUrl) {
             const template = new Eta({views: path.join(__dirname, "templates")});
             const output = template.render("default.eta", rs);
             fs.writeFileSync("output.d2", output);
-            sh("d2", ["--layout=elk", "output.d2", "out.svg"]);
+            console.log('dagre..')
+            sh("d2", ["--layout=dagre", "output.d2", "out-dagre.svg"]);
+            console.log('tala..')
+            sh("d2", ["--layout=tala", "output.d2", "out-tala.svg"]);
             return output;
         });
 
 }
 
 async function main() {
+
+    const input = yargs(process.argv.slice(2)).parse();
+    console.log('input',input)
     const schema = render(process.argv[2]);
+    return;
 }
 
 main();

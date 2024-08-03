@@ -20,7 +20,8 @@
 <% for (var entry of fkMap.entries())  { %>
 <% fk = entry[0] %>
 <% fk = entry[1] %>
-<% console.log('--------',fk) %>
+
  <%= fk.fk_table %>.<%= fk.fk_column %> -> <%= fk.pk_table %>.<%= fk.pk_column %> : <%= fk.fk_name %>
+
 <% } %>
 <% }) %>
