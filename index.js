@@ -26,7 +26,6 @@ async function render(dbUrl) {
                 connectString: dbUrl
             });
 
-
             const dbResult = await connection.execute(
                 fs.readFileSync("./playground/default.sql").toString(),
                 [], // A bind parameter is needed to disambiguate the following options parameter and avoid ORA-01036
@@ -44,7 +43,7 @@ async function render(dbUrl) {
             sh("d2", ["--layout=dagre", "output.d2", "out-dagre.svg"]);
             console.log('tala..')
             sh("d2", ["--layout=tala", "output.d2", "out-tala.svg"]);
-            return output;
+            // return output;
         });
 
 }
@@ -53,6 +52,7 @@ async function main() {
 
     const input = yargs(process.argv.slice(2)).parse();
     console.log('input',input)
+    console.log('input.d2',input.d2)
     const schema = render(process.argv[2]);
     return;
 }
