@@ -13,11 +13,6 @@
  - img name - `imageName` - optional, default out.svg
  - d2 - `d2` - optional, default `--layout=dagre`
  - detail - basic (minimal) / all (everything), optional, default basic
-
-### TODOs
-
- - general  (default.sql)
-   - list query types (default: list tables, PKs,FKs)
  
 ### Oracle 19c and JSON_ARRAYAGG
  - describe  distinct   relationships (oracle 19.10 json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
