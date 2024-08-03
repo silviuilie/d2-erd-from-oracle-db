@@ -2,10 +2,9 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 
-### PRIMARY TODOs       
- - format nullable attribute
-     - views ?
-     - all tables  
+### PRIMARY TODOs        
+   - views ?
+   - all tables  
   
 ### inputs TODO 
  - table exclusions; `exclude` - comma separated, optional, default none - include all
