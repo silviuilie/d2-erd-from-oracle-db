@@ -2,9 +2,10 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 
-### PRIMARY TODOs        
+### TODOs        
    - oracle 23 oracle 18
    - views ?
+   - flat query (table object not json)
   
 ### inputs TODO  
  - out d2 name - `outd2` - optional, default out.d2
@@ -15,4 +16,3 @@
  
 ### Oracle 19c and JSON_ARRAYAGG
  - describe  distinct   relationships (oracle 19.10 json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
- - flat query (table object not json)
