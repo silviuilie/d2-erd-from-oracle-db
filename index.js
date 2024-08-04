@@ -57,6 +57,9 @@ async function render(dbUrl, otherOptions) {
 
 async function main() {
     var otherOptions = require('yargs/yargs')(process.argv.slice(2))
+        .usage('Usage: $0 <command> [options]')
+        .command('node index.js <db-url> [options]', 'render oracle schema as d2 and png')
+        .example('node index.js 127.0.0.1:1521/TEST_DB \\ --d2=--layout=dagre --excludes USERS', 'render oracle TEST_DB schema using dagre layout engine and excluding USERS table as d2 and png')
         .option('excludes', {
             alias: 'e',
             describe: 'comma separated list of tables to exclude'
