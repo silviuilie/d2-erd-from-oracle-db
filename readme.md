@@ -4,7 +4,6 @@
 
 ### PRIMARY TODOs        
    - views ?
-   - all tables  
   
 ### inputs TODO  
  - out d2 name - `outd2` - optional, default out.d2
