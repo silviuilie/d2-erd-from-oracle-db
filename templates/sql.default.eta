@@ -29,6 +29,9 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                    AND uc.CONSTRAINT_TYPE = 'R'
                    AND uc.r_constraint_name = ucp.CONSTRAINT_NAME
                    AND uccp.TABLE_NAME = ucp.TABLE_NAME
+                   <% if (it.excludes) { %>
+                   AND uccp.TABLE_NAME NOT IN (<%~ it.excludes%>)
+                   <% } %>
                  GROUP BY uc.CONSTRAINT_NAME,
                           uc.TABLE_NAME,
                           ucc.COLUMN_NAME,
@@ -50,7 +53,11 @@ WITH pk_keys AS (SELECT uc.TABLE_NAME,
                      )                                              json_cols
               FROM user_tab_cols utc,
                    fk_keys fks
-              WHERE utc.TABLE_NAME = fks.fk_table(+) and utc.COLUMN_NAME= fks.fk_column(+)
+              WHERE utc.TABLE_NAME = fks.fk_table(+)
+                AND utc.COLUMN_NAME= fks.fk_column(+)
+                <% if (it.excludes) { %>
+                AND utc.TABLE_NAME NOT IN (<%~ it.excludes%>)
+                <% } %>
               GROUP BY utc.TABLE_NAME,
                        utc.COLUMN_NAME,
                        utc.DATA_TYPE || '(' || UTC.DATA_LENGTH || ')',

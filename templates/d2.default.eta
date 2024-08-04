@@ -8,7 +8,7 @@
 <% let colMap = new Map(duplicatedCols.map(col =>{return [col.column_name,col]})) %>
 <% colMap.forEach(function(column) { %>
 
-    <%= column.column_name %>:<%= column.data_type %> NULLABLE:<%= column.NULLABLE %><% if (column.is_fk) { %>{constraint: foreign_key}<% } %> <% if (column['column_name'] === table['PRIMARY_KEY']) { %>{constraint: primary_key}<% } %>
+    <%= column.column_name %>:<%= column.NULLABLE=='Y' ? 'NULLABLE' : 'NOT NULL' %> <%= column.data_type %> <% if (column.is_fk) { %>{constraint: foreign_key}<% } %> <% if (column['column_name'] === table['PRIMARY_KEY']) { %>{constraint: primary_key}<% } %>
 
   <% }) %>
 }
