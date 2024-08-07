@@ -4,15 +4,14 @@
 ## options
  - `exclude` - comma separated list of tables to exclude
  - `d2` - d2 [options](https://d2lang.com/tour/man)
+     example : d2=
 ### inputs TODO  
  - out d2 name - `outd2` - optional, default out.d2
  - include nullable attribute - `nullability` - optional, default `true`
  - img name - `imageName` - optional, default out.svg
  - d2 - `d2` - optional, default `--layout=dagre`
- - detail - basic (minimal) / all (everything), optional, default basic
 ### TODOs        
    - oracle 23 oracle 18
-   - views ?
    - flat query (table object not json)
   
  
