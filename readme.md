@@ -2,7 +2,8 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## options
- -`exclude` - comma separated list of tables to exclude
+ - `exclude` - comma separated list of tables to exclude
+ - `d2` - 
 ### inputs TODO  
  - out d2 name - `outd2` - optional, default out.d2
  - include nullable attribute - `nullability` - optional, default `true`
