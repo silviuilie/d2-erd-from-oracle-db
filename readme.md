@@ -8,7 +8,7 @@
 
     example :
 
-         `d2="--layout=dagre -s"`
+         d2="--layout=dagre -s"
 
 ### inputs TODO   
  - out d2 name - `outd2` - optional, default out.d2
