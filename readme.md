@@ -4,7 +4,10 @@
 ## options
  - `exclude` - comma separated list of tables to exclude
  - `d2` - d2 [options](https://d2lang.com/tour/man)
-     example : `d2="--layout=dagre -s"`
+
+
+    example : `d2="--layout=dagre -s"`
+
 ### inputs TODO   
  - out d2 name - `outd2` - optional, default out.d2
  - include nullable attribute - `nullability` - optional, default `true`
