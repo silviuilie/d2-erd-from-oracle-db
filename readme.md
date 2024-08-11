@@ -14,7 +14,8 @@
  - out d2 name - `outd2` - optional, default out.d2
  - include nullable attribute - `nullability` - optional, default `true`
  - img name - `imageName` - optional, default out.svg 
-### TODOs        
+### TODOs    
+   - drop yargs use commander
    - oracle 23 oracle 18
    - flat query (table object not json)
   
