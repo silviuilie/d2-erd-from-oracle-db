@@ -13,8 +13,7 @@
 ### inputs TODO   
  - out d2 name - `outd2` - optional, default out.d2
  - include nullable attribute - `nullability` - optional, default `true`
- - img name - `imageName` - optional, default out.svg
- - d2 - `d2` - optional, default `--layout=dagre`
+ - img name - `imageName` - optional, default out.svg 
 ### TODOs        
    - oracle 23 oracle 18
    - flat query (table object not json)
