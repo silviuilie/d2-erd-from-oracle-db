@@ -23,8 +23,7 @@
 
          d2="--layout=dagre -s"
 
-### inputs TODO   
- - out d2 name - `outd2` - optional, default out.d2
+### inputs TODO    
  - include nullable attribute - `nullability` - optional, default `true`
  - img name - `imageName` - optional, default out.svg 
   
