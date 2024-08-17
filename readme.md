@@ -14,6 +14,7 @@
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## options
+ - `url` - mandatory
  - `exclude` - comma separated list of tables to exclude
  - `d2` - d2 [options](https://d2lang.com/tour/man)
 
