@@ -15,11 +15,9 @@
 
 ## arguments
  - `url` db url
-## options
- - `url` - mandatory
+## options 
  - `exclude` - comma separated list of tables to exclude
  - `d2` - d2 [options](https://d2lang.com/tour/man)
-
 
     example :
 
