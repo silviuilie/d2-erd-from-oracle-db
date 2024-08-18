@@ -4,8 +4,17 @@ const fs = require("fs");
 const prompt = require('prompt');
 const {Eta} = require("eta");
 
-const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
+const { Command } = require('commander');
+const program = new Command();
+
+program
+    .name('d2-orcl-erd')
+    .description('creates d2 entity relationship diagram from an Oracle DB instance schema')
+    .version('0.0.1')
+    .argument('<dbURL>', 'database url in the common format <ip>:<port>/schema, ex : 127.0.0.1:1521/TEST_DB ')
+    .option('--exclude <string>', 'comma separated list of tables to exclude from ERD')
+    .option('--d2 <string>', 'd2 options. see https://d2lang.com/tour/man')
+;
 
 const {execFileSync: sh} = require("child_process");
 
@@ -31,7 +40,6 @@ async function render(dbUrl, otherOptions) {
 
             const template = new Eta({views: path.join(__dirname, "templates")});
 
-            console.log('render:->',template.render("sql.default.eta", otherOptions))
 
             const dbResult = await connection.execute(
                 template.render("sql.default.eta", otherOptions),
@@ -56,17 +64,10 @@ async function render(dbUrl, otherOptions) {
 }
 
 async function main() {
-    var otherOptions = require('yargs/yargs')(process.argv.slice(2))
-        .usage('Usage: $0 <command> [options]')
-        .command('node index.js <db-url> [options]', 'render oracle schema as d2 and png')
-        .example('node index.js 127.0.0.1:1521/TEST_DB \\ --d2=--layout=dagre --excludes USERS', 'render oracle TEST_DB schema using dagre layout engine and excluding USERS table as d2 and png')
-        .option('excludes', {
-            alias: 'e',
-            describe: 'comma separated list of tables to exclude'
-        })
-        .coerce('excludes', ex=>{ return ex.split(/\s*,\s*/).map(table=>"\'"+table+"\'")})
-        .parse()
-    console.log(otherOptions)
+    var otherOptions =  program.parse()
+    console.log("args : ",otherOptions.args);
+    console.log("opts : ",otherOptions.opts());
+    return;
     const url = process.argv[2];
     const schema = render(url, otherOptions);
     return;
