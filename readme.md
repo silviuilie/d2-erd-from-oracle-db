@@ -3,12 +3,6 @@
    - drop yargs use commander
    - oracle 23 oracle 18
    - flat query (table object not json)
-   
-
-
-
-
-
 
 # [D2](https://github.com/terrastruct/d2) ERD from OracleDB
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
