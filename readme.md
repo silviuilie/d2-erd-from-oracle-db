@@ -11,7 +11,7 @@
  - `url` db url
 ## options 
  - `exclude` - comma separated list of tables to exclude
- - `d2` - d2 [options](https://d2lang.com/tour/man); default `--layout=dagre`
+ - `d2` - d2 [options](https://d2lang.com/tour/man); default value `--layout=dagre`.
     example :
 
          d2="--layout=tala -s"
