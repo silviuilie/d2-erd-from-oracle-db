@@ -11,10 +11,10 @@
  - `url` db url
 ## options 
  - `exclude` - comma separated list of tables to exclude
- - `d2` - d2 [options](https://d2lang.com/tour/man)
+ - `d2` - d2 [options](https://d2lang.com/tour/man); default `--layout=dagre`
     example :
 
-         d2="--layout=dagre -s"
+         d2="--layout=tala -s"
 
 ### inputs TODO    
  - include nullable attribute - `nullability` - optional, default `true`
