@@ -1,6 +1,5 @@
 
-# TODOs    
-   - drop yargs use commander
+# TODOs     
    - oracle 23 oracle 18
    - flat query (table object not json)
 
