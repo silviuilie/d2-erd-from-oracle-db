@@ -4,16 +4,21 @@ const fs = require("fs");
 const prompt = require('prompt');
 const {Eta} = require("eta");
 
-const { Command } = require('commander');
+const {Command, Option} = require('commander');
 const program = new Command();
+
+function commaSeparatedTableList(value) {
+    return value.split(',').map(item => `'${item}'`).join(',');
+}
 
 program
     .name('d2-orcl-erd')
     .description('creates d2 entity relationship diagram from an Oracle DB instance schema')
     .version('0.0.1')
-    .argument('<dbURL>', 'database url in the common format <ip>:<port>/schema, ex : 127.0.0.1:1521/TEST_DB ')
-    .option('--exclude <string>', 'comma separated list of tables to exclude from ERD')
-    .option('--d2 <string>', 'd2 options. see https://d2lang.com/tour/man')
+    .argument('<database url>', 'database url in the common format <ip>:<port>/schema, ex : 127.0.0.1:1521/TEST_DB ')
+    .option('--exclude <string>', 'comma separated list of tables to exclude from ERD', commaSeparatedTableList)
+    .option('--d2 <string>', 'd2 options. see https://d2lang.com/tour/man','--layout=dagre')
+    .addOption(new Option('-n --nulls <string>', 'show nullable y/n','n').choices(['y', 'n']))
 ;
 
 const {execFileSync: sh} = require("child_process");
@@ -40,7 +45,6 @@ async function render(dbUrl, otherOptions) {
 
             const template = new Eta({views: path.join(__dirname, "templates")});
 
-
             const dbResult = await connection.execute(
                 template.render("sql.default.eta", otherOptions),
                 // fs.readFileSync("./templates/sql.default.eta").toString(),
@@ -52,24 +56,24 @@ async function render(dbUrl, otherOptions) {
                 }
             );
             const rs = dbResult.rows;
+            rs.nulls = otherOptions.nulls;
             const output = template.render("d2.default.eta", rs);
             fs.writeFileSync("output.d2", output);
-            console.log('dagre..')
-            sh("d2", ["--layout=dagre", "output.d2", "out-dagre.svg"]);
-            // console.log('tala..')
-            // sh("d2", ["--layout=tala", "output.d2", "out-tala.svg"]);
-            // return output;
+
+
+
+            var d2Options = otherOptions.d2 ? otherOptions.d2 : "--layout=dagre";
+            console.log('d2Options',d2Options)
+            sh("d2", [`${d2Options}`, "output.d2", "output.svg"]);
         });
 
 }
 
 async function main() {
-    var otherOptions =  program.parse()
-    console.log("args : ",otherOptions.args);
-    console.log("opts : ",otherOptions.opts());
-    return;
-    const url = process.argv[2];
-    const schema = render(url, otherOptions);
+    var execution = program.parse()
+    console.log("arguments / database url : ", execution.args);
+    console.log("options : ", execution.opts());
+    const schema = render(execution.args[0], execution.opts());
     return;
 }
 
