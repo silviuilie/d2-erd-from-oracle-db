@@ -16,7 +16,6 @@
          d2="--layout=tala -s"
 
 ### inputs TODO    
- - include nullable attribute - `nullability` - optional, default `true`
  - img name - `imageName` - optional, default out.svg 
   
  
