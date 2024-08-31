@@ -21,7 +21,7 @@ program
     .addOption(new Option('-n --nulls <string>', 'show nullable y/n','n').choices(['y', 'n']))
 ;
 
-const {execFileSync: sh} = require("child_process");
+const {exec: sh} = require("child_process");
 
 prompt.message = "oracle";
 prompt.start();
@@ -64,7 +64,16 @@ async function render(dbUrl, otherOptions) {
 
             var d2Options = otherOptions.d2 ? otherOptions.d2 : "--layout=dagre";
             console.log('d2Options',d2Options)
-            sh("d2", [`${d2Options}`, "output.d2", "output.svg"]);
+            // sh("d2", [`${d2Options}`, "output.d2", "output.svg"]);
+            // sh("d2", [`${d2Options}`,"output.d2"]);
+            sh(`d2 ${d2Options} output.d2 output.svg`,(error, stdout, stderr) => {
+                if (error) {
+                    console.error(`exec error: ${error}`);
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
+                console.error(`stderr: ${stderr}`);
+            })
         });
 
 }
