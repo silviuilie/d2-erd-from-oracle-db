@@ -36,6 +36,7 @@
    - render in some other way the NULLABLE / NOT NULL attribute
 
 
- 
-#### Oracle 19c and JSON_ARRAYAGG
- - describe  distinct   relationships (oracle 19.10 json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
+#### NOTES :
+   - tala engine FK rendering points to PK column as oposed to the free layout engines
+   - *Oracle 19c and JSON_ARRAYAGG*
+       - describe  distinct   relationships (oracle 19.10 json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
