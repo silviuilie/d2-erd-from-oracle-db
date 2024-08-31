@@ -30,9 +30,10 @@
   ![img](./playground/output.svg)
 
 # TODOs     
-   - oracle 23 oracle 18
-   - flat query (table object not json) 
-   - img name - `imageName` - optional, default out.svg 
+   - test oracle 23 oracle 18
+   - img name - `imageName` - optional, default output.svg 
+   - flat query (table object not json) ?
+   - render in some other way the NULLABLE / NOT NULL attribute
 
 
  
