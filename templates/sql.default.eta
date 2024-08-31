@@ -68,8 +68,7 @@ SELECT cols.TABLE_NAME,
        JSON_ARRAYAGG(cols.json_cols ORDER BY cols.COLUMN_ID  RETURNING CLOB)   columns,
        /* (!) https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681 */
        JSON_ARRAYAGG(fk_keys.json_fks ORDER BY fk_keys.fk_name   RETURNING CLOB) foreign_relations
---        nvl(fk_keys.json_fks,'{}') foreign_relations
-FROM cols,
+ FROM cols,
      fk_keys,
      pk_keys
 WHERE cols.TABLE_NAME = fk_keys.fk_table(+)
