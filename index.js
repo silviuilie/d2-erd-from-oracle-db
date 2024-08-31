@@ -18,7 +18,7 @@ program
     .argument('<database url>', 'database url in the common format <ip>:<port>/schema, ex : 127.0.0.1:1521/TEST_DB ')
     .option('--exclude <string>', 'comma separated list of tables to exclude from ERD', commaSeparatedTableList)
     .option('--d2 <string>', 'd2 options. see https://d2lang.com/tour/man','--layout=dagre')
-    .addOption(new Option('-n --nulls <string>', 'show nullable y/n','n').choices(['y', 'n']))
+    .addOption(new Option('-n --nulls <string>', 'show nullable y/n','n').default('n').choices(['y', 'n']))
 ;
 
 const {exec: sh} = require("child_process");
@@ -47,33 +47,21 @@ async function render(dbUrl, otherOptions) {
 
             const dbResult = await connection.execute(
                 template.render("sql.default.eta", otherOptions),
-                // fs.readFileSync("./templates/sql.default.eta").toString(),
                 [], // A bind parameter is needed to disambiguate the following options parameter and avoid ORA-01036
                 {
                     outFormat: 4002,     // outFormat can be OBJECT or ARRAY.  The default is ARRAY
                     fetchInfo: {"C": {type: oracle.STRING}}
-                    // fetchArraySize: 100                     // internal buffer allocation size for tuning
                 }
             );
             const rs = dbResult.rows;
             rs.nulls = otherOptions.nulls;
+
             const output = template.render("d2.default.eta", rs);
             fs.writeFileSync("output.d2", output);
 
-
-
             var d2Options = otherOptions.d2 ? otherOptions.d2 : "--layout=dagre";
-            console.log('d2Options',d2Options)
-            // sh("d2", [`${d2Options}`, "output.d2", "output.svg"]);
-            // sh("d2", [`${d2Options}`,"output.d2"]);
-            sh(`d2 ${d2Options} output.d2 output.svg`,(error, stdout, stderr) => {
-                if (error) {
-                    console.error(`exec error: ${error}`);
-                    return;
-                }
-                console.log(`stdout: ${stdout}`);
-                console.error(`stderr: ${stderr}`);
-            })
+
+            sh(`d2 ${d2Options} output.d2 output.svg`)
         });
 
 }
@@ -83,7 +71,7 @@ async function main() {
     console.log("arguments / database url : ", execution.args);
     console.log("options : ", execution.opts());
     const schema = render(execution.args[0], execution.opts());
-    return;
+    console.log(schema)
 }
 
 main();
