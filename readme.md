@@ -27,7 +27,7 @@
    
    wil produce something like :
 
-        ![img](./playground/output.png)
+  ![img](./playground/output.png)
 
 # TODOs     
    - oracle 23 oracle 18
