@@ -21,9 +21,13 @@
 
         node index.js -h
 
-   render ERD for TEST_PDB excluding PERSONS table including nullability column attributes with some d2 arguments like layout etc
+   render ERD for TEST_PDB excluding USERS table including nullability column attributes with some d2 arguments like layout etc
    
-        node index.js 127.0.0.42:1521/TEST_PDB --exclude PERSONS  -n y --d2 '--debug --layout=dagre -s'
+        node index.js 127.0.0.42:1521/TEST_PDB --exclude USERS  -n y --d2 '--debug --layout=tala -s'
+   
+   wil produce something like :
+
+        ![img](./playground/output.png)
 
 # TODOs     
    - oracle 23 oracle 18
