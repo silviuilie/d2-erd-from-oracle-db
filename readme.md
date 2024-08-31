@@ -1,7 +1,5 @@
 
-# TODOs     
-   - oracle 23 oracle 18
-   - flat query (table object not json)
+
 
 # [D2](https://github.com/terrastruct/d2) ERD from OracleDB
   see _[D2](https://github.com/terrastruct/d2#related) ERD from Postgres_ [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
@@ -15,8 +13,6 @@
 
          d2="--layout=tala -s"
 
-### inputs TODO    
- - img name - `imageName` - optional, default out.svg 
 
 
 ### examples
@@ -29,7 +25,10 @@
    
         node index.js 127.0.0.42:1521/TEST_PDB --exclude PERSONS  -n y --d2 '--debug --layout=dagre -s'
 
-    
+# TODOs     
+   - oracle 23 oracle 18
+   - flat query (table object not json) 
+   - img name - `imageName` - optional, default out.svg 
 
 
  
