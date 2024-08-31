@@ -7,12 +7,9 @@
 ## arguments
  - `url` db url
 ## options 
- - `exclude` - comma separated list of tables to exclude
- - `d2` - d2 [options](https://d2lang.com/tour/man); default value `--layout=dagre`.
-    example :
-
-         d2="--layout=tala -s"
-
+ - `exclude` - comma separated list of tables to exclude; no default value
+ - `nulls` - y/n, show nullable column attribute; default value `n`
+ - `d2` - d2 [options](https://d2lang.com/tour/man); default value `--layout=dagre`. 
 
 
 ### examples
