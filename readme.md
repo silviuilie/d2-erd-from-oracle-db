@@ -17,7 +17,21 @@
 
 ### inputs TODO    
  - img name - `imageName` - optional, default out.svg 
-  
+
+
+### examples
+
+   print some help
+
+        node index.js -h
+
+   render ERD for TEST_PDB excluding PERSONS table including nullability column attributes with some d2 arguments like layout etc
+   
+        node index.js 127.0.0.42:1521/TEST_PDB --exclude PERSONS  -n y --d2 '--debug --layout=dagre -s'
+
+    
+
+
  
 #### Oracle 19c and JSON_ARRAYAGG
  - describe  distinct   relationships (oracle 19.10 json_arrayagg not implemented .. agregation https://asktom.oracle.com/ords/f?p=100:11:0::::P11_QUESTION_ID:9546118900346418681)
