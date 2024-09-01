@@ -14,7 +14,7 @@
 
 ### examples
 
-   print some help
+   help
 
         node index.js -h
 
