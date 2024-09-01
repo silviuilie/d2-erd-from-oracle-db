@@ -5,7 +5,7 @@
 
   generate D2 entity relationship diagram for an oracle schema.
   
-  based on _[D2](https://github.com/terrastruct/d2#related) [ERD from Postgres : d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
+  based on [D2](https://github.com/terrastruct/d2#related) [ERD from Postgres : d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## arguments
  - `url` db url
