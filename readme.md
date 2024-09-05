@@ -1,7 +1,7 @@
 
 
 
-# [D2](https://github.com/terrastruct/d2) ERD from OracleDB
+# [D2](https://github.com/terrastruct/d2) Entity Relationship Diagram from OracleDB
 
   generate entity relationship diagram for an oracle schema using [D2](https://github.com/terrastruct/d2).
   
