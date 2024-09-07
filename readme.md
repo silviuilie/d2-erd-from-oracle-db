@@ -28,15 +28,6 @@
   ![img](./playground/output.svg)
 
 
-### Related 
-
-Create Entity-Relationship Diagrams from SQL Create statements using d2lang and dioxus rust
-
-https://github.com/mdauthentic/db2erd
-
-
-
-
 #### NOTES :
    - tala engine FK rendering points to PK column as oposed to the free layout engines ([sql_table connections point to exact row](https://d2lang.com/tour/tala/))
    - *Oracle 19c and JSON_ARRAYAGG*
@@ -48,3 +39,14 @@ https://github.com/mdauthentic/db2erd
    - test oracle 23 oracle 18
    - render in some other way the NULLABLE / NOT NULL attribute
    - flat query (table object not json) ?
+
+     
+### Related 
+
+Create Entity-Relationship Diagrams from SQL Create statements using d2lang and dioxus rust
+
+https://github.com/mdauthentic/db2erd
+
+
+
+
