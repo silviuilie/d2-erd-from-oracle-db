@@ -1,9 +1,9 @@
 
 
 
-# generate [d2](https://github.com/terrastruct/d2) Entity Relationship Diagram from an Oracle database instance 
+# generate [d2lang](https://github.com/terrastruct/d2) Entity Relationship Diagrams from an Oracle database instance 
  
-  based on [d2](https://github.com/terrastruct/d2#related) [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
+  based on [d2lang](https://github.com/terrastruct/d2#related) [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
 ## arguments
  - `url` db url
@@ -26,6 +26,14 @@
    wil produce something like :
 
   ![img](./playground/output.svg)
+
+
+### Related 
+
+Create Entity-Relationship Diagrams from SQL Create statements using d2lang and dioxus rust
+
+https://github.com/mdauthentic/db2erd
+
 
 
 
