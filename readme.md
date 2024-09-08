@@ -15,10 +15,6 @@
 
 ### examples
 
-   help
-
-        node index.js -h
-
    render ERD for TEST_PDB excluding USERS table including nullability column attributes with some d2 arguments like layout etc
    
         node index.js 127.0.0.42:1521/TEST_PDB --exclude USERS  -n y --d2 '--debug --layout=tala -s'
@@ -27,6 +23,10 @@
 
   ![img](./playground/output.svg)
 
+
+   help
+
+        node index.js -h
 
 #### NOTES :
    - tala engine FK rendering points to PK column as oposed to the free layout engines ([sql_table connections point to exact row](https://d2lang.com/tour/tala/))
