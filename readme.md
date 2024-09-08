@@ -1,7 +1,7 @@
 
 
 
-# generate [d2lang](https://github.com/terrastruct/d2) Entity Relationship Diagrams from an Oracle database instance 
+# generate [d2lang](https://github.com/terrastruct/d2) entity relationship diagram from oracle database instance 
  
   based on [d2lang](https://github.com/terrastruct/d2#related) [d2-erd-from-postgres](https://github.com/zekenie/d2-erd-from-postgres/)
 
