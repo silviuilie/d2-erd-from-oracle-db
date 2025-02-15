@@ -36,7 +36,7 @@
 
 
 #### TODOs     
-   - test oracle 23 oracle 18
+   - test oracle 23/18
    - render NULLABLE / NOT NULL attribute better
    - flat query (table object not json) ?
 
